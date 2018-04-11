@@ -6,16 +6,16 @@
         "message": "欢迎捐助"
     },
     "I_contributed_already": {
-        "message": "我已支付"
+        "message": "我捐助过了"
     },
     "Remind_me_later": {
         "message": "稍后提醒我"
     },
     "I_dont_want_to_contribute": {
-        "message": "我不想支付"
+        "message": "我不想捐助"
     },
     "Thank_you_very_much_": {
-        "message": "非常感谢您！"
+        "message": "非常感谢您的捐助！"
     },
     "Invalid_UserScript__Sry_": {
         "message": "用户脚本无效！"
@@ -35,6 +35,14 @@
         "message": "下载来源：$url$",
         "placeholders": {
             "url": {
+                "content": "$1"
+            }
+        }
+    },
+    "Script_0name0_is_slowing_down_some_page_loads_": {
+        "message": "脚本 '$name$' 正在拖慢你的页面加载！",
+        "placeholders": {
+            "name": {
                 "content": "$1"
             }
         }
@@ -119,6 +127,9 @@
     "A_recheck_of_the_GreaseMonkey_FF_compatibility_options_may_be_required_in_order_to_run_this_script_": {
         "message": "为了运行当前脚本，需要开启 GreaseMonkey/FireFox 兼容性选项。"
     },
+    "Automatically_added_user_includes_for_compatibility_reasons_": {
+        "message": "为保证兼容性，一些@include信息已被自动添加"
+    },
     "Author": {
         "message": "作者"
     },
@@ -197,13 +208,13 @@
         "message": "临时允许"
     },
     "Always_allow": {
-        "message": "允许"
+        "message": "总是允许"
     },
     "Always_allow_domain": {
-        "message": "允许域名"
+        "message": "总是允许域名"
     },
     "Always_allow_all_domains": {
-        "message": "总是允许域名"
+        "message": "总是允许所有域名"
     },
     "Forbid_once": {
         "message": "拒绝一次"
@@ -218,7 +229,7 @@
         "message": "不再询问"
     },
     "Focus_tab": {
-        "message": "聚焦到源码面板"
+        "message": "转移焦点到源码面板"
     },
     "Skip_timeout__0seconds0_seconds_": {
         "message": "跳过超时（$seconds$ 秒）",
@@ -229,10 +240,10 @@
         }
     },
     "A_userscript_wants_to_access_a_cross_origin_resource_": {
-        "message": "一个用户脚本试图访问跨源资源。"
+        "message": "一个用户脚本试图访问跨站资源。"
     },
     "A_request_to_a_cross_origin_resource_is_nothing_unusual__You_just_have_to_check_whether_this_script_has_a_good_reason_to_access_this_domain__For_example_there_are_only_a_very_few_reasons_for_a_userscript_to_contact_your_bank__Please_note_that_userscript_authors_can_avoid_this_dialog_by_adding_@connect_tags_to_their_scripts__You_can_change_your_opinion_at_any_time_at_the_scripts_settings_tab_": {
-        "message": "一个跨源资源请求并不罕见。\n您只需检查这个脚本是否有访问这一域名的好理由。\n比如说，用户脚本一般没理由访问您的银行账户。\n\n请注意，用户脚本作者可通过添加 [url=$connect$]@connect tags[/url] 到他们的脚本中来避免此对话框。\n\n不管您如何决定，您都随时可以在脚本的[url=$settings$]设置页面[/url]中更改您的决定。",
+        "message": "一个跨站资源请求并不罕见。\n您只需检查这个脚本是否有访问这一域名的合理理由。\n比如说，用户脚本一般没理由访问您的银行账户。\n\n请注意，用户脚本作者可通过添加 [url=$connect$]@connect tags[/url] 到他们的脚本中来避免此对话框。\n\n不管您如何决定，您都随时可以在脚本的[url=$settings$]设置页面[/url]中更改您的决定。",
         "placeholders": {
             "connect": {
                 "content": "$1"
@@ -255,7 +266,7 @@
         "message": "这将给予此脚本在所有页面接收和发送数据的权限。这可能不安全！\n\n您确定要继续吗？"
     },
     "No_update_found__sry_": {
-        "message": "暂时没有更新，等会儿再来吧~"
+        "message": "暂时没有更新，过一阵子再来吧~"
     },
     "Unknown_method_0name0": {
         "message": "未知方法：$name$",
@@ -274,11 +285,55 @@
     "Get_new_scripts___": {
         "message": "获取新脚本..."
     },
+    "This_script_was_deleted": {
+        "message": "这个脚本已被删除"
+    },
+    "This_script_was_executed_0count0_times": {
+        "message": "这个脚本已被执行$count$次",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "This_script_was_not_executed_yet": {
+        "message": "这个脚本还没被用过"
+    },
+    "Exclude_0domain0": {
+        "message": "排除$domain$",
+        "placeholders": {
+            "domain": {
+                "content": "$1"
+            }
+        }
+    },
     "Check_for_userscripts_updates": {
-        "message": "用户脚本检查更新"
+        "message": "检查用户脚本更新"
     },
     "Waiting_for_sync_to_finish": {
         "message": "等待同步完成"
+    },
+    "0count0_changes_imported": {
+        "message": "导入了$count$个改动",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "0count0_changes_exported": {
+        "message": "导出了$count$个改动",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "Sync_is_running": {
+        "message": "正在同步"
+    },
+    "Sync_finished": {
+        "message": "同步完成"
     },
     "Settings": {
         "message": "设置"
@@ -334,14 +389,17 @@
     "Details": {
         "message": "详情"
     },
+    "UUID": {
+        "message": "唯一标识（UUID）"
+    },
     "Apply_compatibility_options_to_required_script_too": {
         "message": "也将兼容性选项应用到 @require 脚本"
     },
     "Fix_wrappedJSObject_property_access": {
-        "message": "修复 wrappedJSObject 属性"
+        "message": "修复 wrappedJSObject 属性访问"
     },
     "Convert_CDATA_sections_into_a_chrome_compatible_format": {
-        "message": "转换 CDATA 部分为 Chrome 兼容的格式"
+        "message": "转换 CDATA 部分到 Chrome 兼容的格式"
     },
     "Fix_for_var_in_statements": {
         "message": "修复“for (var j in x)”语句"
@@ -392,7 +450,10 @@
         "message": "用...替换"
     },
     "Replace_": {
-        "message": "替换？"
+        "message": "替换吗？"
+    },
+    "Stop": {
+        "message": "停"
     },
     "There_are_unsaved_changed_": {
         "message": "有未保存的更改！\n仍要关闭编辑器？"
@@ -445,13 +506,13 @@
         "message": "特性"
     },
     "This_script_stores_data": {
-        "message": "此脚本用 Tampermonkey 存储了数据。"
+        "message": "此脚本用 Tampermonkey 存储数据。"
     },
     "This_script_has_access_to_https_pages": {
-        "message": "此脚本能访问 https 页面。"
+        "message": "此脚本要访问 https 页面。"
     },
     "One_or_more_compatibility_options_are_set": {
-        "message": "此脚本开启了一个或多个兼容选项，您或应审视其配置。"
+        "message": "此脚本开启了一个或多个兼容选项，您或应审查其配置。"
     },
     "This_script_has_full_web_access": {
         "message": "此脚本有完全的网络访问权限。"
@@ -469,7 +530,7 @@
         "message": "这是一个使用 Javascript 编写的用户脚本。"
     },
     "Really_import_0name0__": {
-        "message": "确定导入原生脚本“$name$”？",
+        "message": "确定导入脚本“$name$”？",
         "placeholders": {
             "name": {
                 "content": "$1"
@@ -607,6 +668,18 @@
     "Key_Mapping": {
         "message": "按键映射"
     },
+    "Windows": {
+        "message": "窗口"
+    },
+    "Sublime": {
+        "message": "Sublime Text文本编辑器"
+    },
+    "Emacs": {
+        "message": "Emacs文本编辑器"
+    },
+    "Vim": {
+        "message": "Vim文本编辑器"
+    },
     "Please_check_the_0editor0_documentation_for_more_details_": {
         "message": "请查阅 $editor$ 文档了解更多信息。",
         "placeholders": {
@@ -655,10 +728,10 @@
         "message": "匿名统计数据"
     },
     "Allow_Tampermonkey_to_collect_anonymous_statistics_via_Google_Analytics": {
-        "message": "允许 Tampermonkey 通过 Google Analytics 收集匿名使用统计。这可以帮助我改进 Tampermonkey 和弄清应关注的焦点。如果您不喜欢这种感觉，尽管禁用它。"
+        "message": "允许 Tampermonkey 通过 Google Analytics 收集匿名使用统计。这可以帮助我改进 Tampermonkey 和弄清工作重点。如果您不喜欢被收集信息的感觉，尽管禁用它。"
     },
     "Dont_ask_me_for_simple_script_updates": {
-        "message": "简单的脚本更新不必询问我"
+        "message": "直接执行简单的脚本更新，不必询问我"
     },
     "Hide_notification_after": {
         "message": "多久后隐藏提醒"
@@ -706,7 +779,7 @@
         "message": "文件扩展名白名单"
     },
     "Only_files_with_these_extensions_can_be_saved_to_the_harddisk_Be_careful_to_not_allow_file_extensions_that_represent_executables_at_your_operating_system_": {
-        "message": "仅允许以下扩展名的文件被保存到硬盘。\n请您注意，不要允许在您的操作系统上为可执行文件的扩展名！"
+        "message": "仅允许以下扩展名的文件被保存到硬盘。\n请您注意，在您的操作系统上为可执行文件的扩展名，不要允许！"
     },
     "Your_whitelist_seems_to_include_executable_files_This_means_your_userscripts_may_download_malware_or_spyware_to_your_harddisk_": {
         "message": "您的白名单似乎包含可执行文件！\n这意味着您的用户脚本有可能下载恶意软件或间谍软件到您的硬盘！！"
@@ -736,7 +809,7 @@
         "message": "同时"
     },
     "Experimental": {
-        "message": "实验"
+        "message": "实验性"
     },
     "strict_mode": {
         "message": "严格模式"
@@ -762,6 +835,12 @@
     "Favicon_Service": {
         "message": "网站图标服务"
     },
+    "Google": {
+        "message": "Google搜索引擎"
+    },
+    "DuckDuckGo": {
+        "message": "DuckDuckGo搜索引擎"
+    },
     "Warning_unsafe_site_warnings_might_appear_": {
         "message": "警告：如果脚本包含潜在有害的 URL，可能会出现不安全网站的警告。"
     },
@@ -785,6 +864,15 @@
     "Last_updated": {
         "message": "最后更新"
     },
+    "User_modified": {
+        "message": "修改过的"
+    },
+    "This_external_resource_will_not_auto_update__Please_delete_it_in_order_to_enable_updates_again_": {
+        "message": "该外置资源不会自动更新！若想再次启用更新，请删除它。"
+    },
+    "MIME_Type": {
+        "message": "MIME类型"
+    },
     "Version": {
         "message": "版本"
     },
@@ -801,7 +889,7 @@
         "message": "此脚本已被禁用检查更新，或者无法检查"
     },
     "Click_here_to_move_this_script": {
-        "message": "点这里移动此脚本"
+        "message": "点击这里移动此脚本"
     },
     "overwritten_by_user": {
         "message": "被用户设置覆盖"
@@ -867,6 +955,9 @@
     },
     "Install_this_script": {
         "message": "安装此脚本"
+    },
+    "Try_to_install_as_script": {
+        "message": "尝试安装为脚本"
     },
     "New_script_template_": {
         "message": "新建用户脚本模板"
@@ -961,13 +1052,16 @@
         "message": "用户域名黑名单"
     },
     "XHR_Security": {
-        "message": "XHR 安全"
+        "message": "XML HTTP请求（XHR）安全"
     },
     "An_internal_error_occured_Do_you_want_to_visit_the_forum_": {
         "message": "发生一个内部错误。如果这个问题在重启浏览器后继续出现，请按“确定”并在论坛中报告这个问题。\n\n您是否要访问 Tampermonkey 论坛？"
     },
+    "TESLA": {
+        "message": "TESLA磁能同步"
+    },
     "Enable_TESLA": {
-        "message": "启用 TESLA"
+        "message": "启用TESLA磁能同步（基于Chrome账号）"
     },
     "Tampermonkey_External_Script_List_Access": {
         "message": "脚本同步 (Tampermonkey 外部脚本列表访问)"
@@ -981,6 +1075,15 @@
     "Allow_headers_to_be_modified_by_scripts": {
         "message": "允许脚本修改 HTTP 报头"
     },
+    "Script_local_files_access": {
+        "message": "允许脚本访问本地文件"
+    },
+    "require_and_resource": {
+        "message": "外置资源 (@require和@resource)"
+    },
+    "All_local_files": {
+        "message": "所有本地文件"
+    },
     "Allow_communication_with_cooperate_pages": {
         "message": "允许与合作页面通信"
     },
@@ -991,7 +1094,7 @@
         "message": "仅 Tampermonkey 版本"
     },
     "This_option_allows_the_Tampermonkey_homepage_and_some_script_hosting_pages_to_determine_the_Tampermonkey_version_and_whether_a_script_is_installed_": {
-        "message": "此选项允许 Tampermonkey 主页和一些脚本托管页面确定 Tampermonkey 版本和一些基本的脚本信息（安装情况、版本、启用状态）。"
+        "message": "此选项允许 Tampermonkey 主页和一些脚本托管网站确定 Tampermonkey 版本和一些基本的脚本信息（安装情况、版本、启用状态）。"
     },
     "Subresource_Integrity": {
         "message": "子资源完整性"
@@ -1075,7 +1178,7 @@
         "message": "重置同步"
     },
     "This_will_remove_all_remote_data_from_sync_Ok_": {
-        "message": "您真的要删除位于“同步”的所有数据吗？"
+        "message": "您真的要删除同步所得的所有数据吗？"
     },
     "Enable_autoSave": {
         "message": "编辑器失去焦点时保存内容"
@@ -1120,7 +1223,7 @@
         "message": "祝贺您，所有设置顺利完成。"
     },
     "TM_has_access_to_file_URIs": {
-        "message": "Tampermonkey 已有访问文件 URL 的权限。:)"
+        "message": "Tampermonkey 已有访问文件 URI 的权限。:)"
     },
     "Browser_Profile_Path": {
         "message": "浏览器配置文件路径"
@@ -1197,6 +1300,9 @@
     "Storage": {
         "message": "存储"
     },
+    "URL": {
+        "message": "网址(URL)"
+    },
     "Size": {
         "message": "大小"
     },
@@ -1256,5 +1362,221 @@
     },
     "Ok": {
         "message": "确定"
+    },
+    "Developer": {
+        "message": "开发者"
+    },
+    "Templates": {
+        "message": "模板"
+    },
+    "Undo": {
+        "message": "撤销"
+    },
+    "Redo": {
+        "message": "重做"
+    },
+    "Cut": {
+        "message": "剪切"
+    },
+    "Copy": {
+        "message": "复制"
+    },
+    "Paste": {
+        "message": "粘贴"
+    },
+    "Select_All": {
+        "message": "全选"
+    },
+    "Toggle_Comment": {
+        "message": "标记/撤销标记为注释"
+    },
+    "Toggle_Comment_Indented": {
+        "message": "标记/撤销标记为注释（有缩进）"
+    },
+    "Toggle_Block_Comment": {
+        "message": "标记/撤销标记为注释块"
+    },
+    "Replace_All": {
+        "message": "全部替换"
+    },
+    "Lines": {
+        "message": "行"
+    },
+    "Indent_Less": {
+        "message": "减少缩进"
+    },
+    "Indent_More": {
+        "message": "增加缩进"
+    },
+    "Move_Line_Up": {
+        "message": "上移该行"
+    },
+    "Move_Line_Down": {
+        "message": ">>>下移该行<<<"
+    },
+    "Duplicate_Lines": {
+        "message": "复制行"
+    },
+    "Delete_Line": {
+        "message": "删除行"
+    },
+    "Join_Lines": {
+        "message": "合并行"
+    },
+    "Insert_Line_Before": {
+        "message": ">>>Insert Line Before<<<"
+    },
+    "Insert_Line_After": {
+        "message": ">>>Insert Line After<<<"
+    },
+    "Text": {
+        "message": "文本"
+    },
+    "Upper_Case": {
+        "message": "大写"
+    },
+    "Lower_Case": {
+        "message": "小写"
+    },
+    "Delete_Line_Left": {
+        "message": ">>>Delete Line Left<<<"
+    },
+    "Delete_Line_Right": {
+        "message": ">>>Delete Line Right<<<"
+    },
+    "Delete_to_Previous_Word_Boundary": {
+        "message": ">>>Delete to Previous Word Boundary<<<"
+    },
+    "Delete_to_Next_Word_Boundary": {
+        "message": ">>>Delete to Next Word Boundary<<<"
+    },
+    "Transpose": {
+        "message": ">>>Transpose<<<"
+    },
+    "Line_Case_Insensitive": {
+        "message": ">>>Line Case Insensitive<<<"
+    },
+    "Folding": {
+        "message": "函数折叠"
+    },
+    "Fold": {
+        "message": "折叠函数"
+    },
+    "Unfold": {
+        "message": "展开函数"
+    },
+    "Fold_All": {
+        "message": "全部折叠"
+    },
+    "Unfold_All": {
+        "message": "全部展开"
+    },
+    "Sublime_Mark": {
+        "message": ">>>Sublime Mark<<<"
+    },
+    "Set_Sublime_Mark": {
+        "message": ">>>Set Sublime Mark<<<"
+    },
+    "Select_to_Sublime_Mark": {
+        "message": ">>>Select to Sublime Mark<<<"
+    },
+    "Swap_with_Sublime_Mark": {
+        "message": ">>>Swap with Sublime Mark<<<"
+    },
+    "Delete_to_Sublime_Mark": {
+        "message": ">>>Delete to Sublime Mark<<<"
+    },
+    "Yank_Sublime_Mark": {
+        "message": ">>>Yank Sublime Mark<<<"
+    },
+    "Selection": {
+        "message": ">>>Selection<<<"
+    },
+    "Incremental_Find": {
+        "message": ">>>Incremental Find<<<"
+    },
+    "Add_Selection_Above": {
+        "message": ">>>Add Selection Above<<<"
+    },
+    "Add_Selection_Below": {
+        "message": ">>>Add Selection Below<<<"
+    },
+    "Split_into_Lines": {
+        "message": ">>>Split into Lines<<<"
+    },
+    "Select_Line": {
+        "message": ">>>Select Line<<<"
+    },
+    "Select_Scope": {
+        "message": ">>>Select Scope<<<"
+    },
+    "Select_Bookmarks": {
+        "message": "选择有书签的"
+    },
+    "Select_between_Brackets": {
+        "message": "选择成对大括号内的内容"
+    },
+    "Select_Next_Occurrence": {
+        "message": ">>>Select Next Occurrence<<<"
+    },
+    "Find": {
+        "message": "查找"
+    },
+    "Find_Next": {
+        "message": "查找下一个匹配项"
+    },
+    "Find_Previous": {
+        "message": "查找上一个匹配项"
+    },
+    "Find_Under": {
+        "message": ">>>Find Under<<<"
+    },
+    "Find_All_Under": {
+        "message": ">>>Find All Under<<<"
+    },
+    "Find_Under_Previous": {
+        "message": ">>>Find Under Previous<<<"
+    },
+    "GoTo": {
+        "message": "转到行"
+    },
+    "Document_Start": {
+        "message": "文件开头"
+    },
+    "Document_End": {
+        "message": "文件结尾"
+    },
+    "Group_Left": {
+        "message": ">>>Group Left<<<"
+    },
+    "Group_Right": {
+        "message": ">>>Group Right<<<"
+    },
+    "Closing_Bracket": {
+        "message": "另一半大括号"
+    },
+    "Line_Up": {
+        "message": ">>>Line Up<<<"
+    },
+    "Line_Down": {
+        "message": ">>>Line Down<<<"
+    },
+    "Center_Cursor": {
+        "message": ">>>Center Cursor<<<"
+    },
+    "Bookmarks": {
+        "message": "书签"
+    },
+    "Toggle": {
+        "message": "切换"
+    },
+    "Clear_All": {
+        "message": "全部清除"
+    },
+    "Next_Bookmark": {
+        "message": "上一个书签"
+    },
+    "Prev_Bookmark": {
+        "message": "下一个书签"
     }
 }
